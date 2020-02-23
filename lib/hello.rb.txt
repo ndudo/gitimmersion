@@ -1,0 +1,17 @@
+Hello,World
+Hello, #{ARGV.first}!
+name = ARGV.first || world
+Hello, #{name}!
+# This is a bad comment. We want to revert it. 
+name = ARGV.first || "World"
+"Hello,#{name}!
+# This is an unwanted but commited change name = ARGV.first || "World"
+Hello, #{name}!
+Class Great
+require 'greeter'
+
+# Default is World
+name = ARGV.first || "World"
+
+greeter = Greeter.new(name)
+puts greeter.greet
